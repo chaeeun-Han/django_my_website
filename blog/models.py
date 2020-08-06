@@ -8,6 +8,8 @@ class Post(models.Model):
     # 글에 들어갈 내용, TextField는 장문의 글을 받아올 수 있음.
     content = models.TextField()
 
+    head_image = models.ImageField(upload_to='%Y/%m/%d/', blank=True)
+
     # 언제 작성되었는지
     created = models.DateTimeField()
 
