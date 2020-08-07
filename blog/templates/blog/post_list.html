@@ -2,19 +2,66 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Blog</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <meta name="robots" content="index,follow">
+    <title>백종원의 레시피</title>
+    <link rel="stylesheet" href="/static/blog/fontawesome.min.css">
+    <link rel="css/subcide.css" href="stylesheet">
 </head>
 <body>
-<h1>Main screen!!</h1>
+<dl class="skip-nav">
+    <dt><strong>바로 가기</strong></dt>
+    <dd><a href="#top_content">skip to content</a></dd>
+</dl>
+<hr>
+<div id="wrap">
+    <!--header-->
+    <header id="header">
+        <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="/static/img/logo_cuisine.jpg" alt="cuisine"></a></h1>
+    </header>
+    <!-- //header-->
+    <!-- container-->
+    <div id="container">
+        <!--top_content-->
+        <div id="top_content">
+            <h2>인기 게시물</h2>
+            {% for p in object_list %}
+            {% if p.head_image %}
+                <img src="{{ p.head_image.url }}" alt="img">
+            {% endif %}
+            <h3>{{ p }}</h3>
+            <p>{{ p.content | truncatewords:50 }}</p>  <!--truncatewords는 게시글 일부를 보여줌 -->
+            {% endfor %}
+        </div>
+        <!--//top_content -->
+        <hr>
+        <!--bottom_content-->
+        <div id="bottom_content">
+            {% for p in object_list %}
+            {% if p.head_image %}
+                <img src="{{ p.head_image.url }}" alt="img">
+            {% endif %}
+            <h3>{{ p.title }}</h3>
+            {% endfor %}
+        </div>
+        <!--//bottom_content-->
+        <!--aside-->
+        <div id="aside">
+            <h3>한식</h3>
+        </div>
+        <!--//aside-->
+    </div>
+    <!-- //container-->
+    <!-- footer-->
+    <div id="footer">
 
-{% for p in object_list %}
-    {% if p.head_image %}
-        <img src="{{ p.head_image.url }}" alt="img">
-    {% endif %}
-    <h3>{{ p }}</h3>
-    <h4>{{ p.created }} by {{ p.author }}</h4>
-    <p>{{ p.content }}</p>
-{% endfor %}
+    </div>
+    <!-- //footer-->
+</div>
 
 </body>
 </html>
