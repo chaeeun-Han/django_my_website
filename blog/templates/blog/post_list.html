@@ -117,16 +117,18 @@
 
                     <!-- Page Content -->
                     <div class="row">
+                        {% for p in object_list %}
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <a href="#"><img class="card-img-top" src="{{ p.head_image.url }}" alt=""></a>
                                 <div class="card-body">
                                     <h4 class="card-title">
-                                        <a href="#">Project One</a>
+                                        <a href="#">{{ p.title }}</a>
                                     </h4>
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="card h-100">
                                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -218,9 +220,40 @@
 
                     <!-- Side Widget -->
                     <div class="card my-4">
-                        <h5 class="card-header">Side Widget</h5>
+                        <h5 class="card-header">한식</h5>
+<!--                        <a href="#" class="card-header-icon" aria-label="more options">-->
+<!--                            <span class="icon">-->
+<!--                                <i class="fas-fa-angle-down" aria-hidden="true"></i>-->
+<!--                            </span>더보기-->
+<!--                        </a>-->
                         <div class="card-body">
-                            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                            {{ Posts.title }}
+                        </div>
+
+                    </div>
+
+                    <!-- Side Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">중식</h5>
+                        <div class="card-body">
+                            {{ Posts.title }}
+                        </div>
+<!--                        <p class="section_more"><a href="#"><span class="ico"></span>더보기</a></p>-->
+                    </div>
+
+                    <!-- Side Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">일식</h5>
+                        <div class="card-body">
+                            {{ Posts.title }}
+                        </div>
+                    </div>
+
+                    <!-- Side Widget -->
+                    <div class="card my-4">
+                        <h5 class="card-header">양식</h5>
+                        <div class="card-body">
+                            {{ Posts.title }}
                         </div>
                     </div>
 
