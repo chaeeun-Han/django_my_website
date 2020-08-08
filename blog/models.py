@@ -1,6 +1,13 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 
+#글의 분류
+class Category(models.Model):
+    name = models.CharField(max_length=25, help_text="블로그 글의 분류를 입력하세요.(ex:한식)")
+
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
     # 블로그에서 제목을 의미, max_length로 글자 수 제한을 둠.
@@ -13,10 +20,19 @@ class Post(models.Model):
     # 언제 작성되었는지
     created = models.DateTimeField()
 
-    # 누가 작성을 했는지지, user라는 객체는 이미 django에서 제공. ForeignKey로 연결함.
+    # 누가 작성을 했는지, user라는 객체는 이미 django에서 제공. ForeignKey로 연결함.
     author = models.ForeignKey(User, on_delete=True)
 
+    category = models.ManyToManyField(Category, help_text="글의 분류를 설정하세요.")
+
     def __str__(self):
-        return '{} :: {}'.format(self.title, self.author)
+        return self.title
+
+    #1번 글의 경우 -> single/1
+    def get_absolute_url(self):
+        return reverse("single", args=[str(self.id)])
+
+
+
 
 
