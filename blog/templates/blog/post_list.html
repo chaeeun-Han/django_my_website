@@ -27,21 +27,20 @@
         <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="/static/img/logo_cuisine.jpg" alt="cuisine"></a></h1>
     </header>
     <!-- //header-->
+
     <!-- container-->
     <div id="container">
         <!-- Page Content -->
         <div class="container">
 
             <!-- Page Heading -->
-            <h1 class="my-4">Page Heading
-                <small>Secondary Text</small>
-            </h1>
+            <h1 class="my-4">인기 게시물</h1>
 
             <!-- Project One -->
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/500x300" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
@@ -58,7 +57,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/500x300" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
@@ -75,7 +74,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/500x300" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
@@ -93,7 +92,7 @@
 
                 <div class="col-md-7">
                     <a href="#">
-                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/500x300" alt="">
                     </a>
                 </div>
                 <div class="col-md-5">
@@ -105,6 +104,74 @@
             <!-- /.row -->
 
             <hr>
+
+        </div>
+        <!-- /.container -->
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project One</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project Two</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project Three</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project Four</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project Five</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">Project Six</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
 
             <!-- Pagination -->
             <ul class="pagination justify-content-center">
@@ -133,24 +200,9 @@
 
         </div>
         <!-- /.container -->
-        <hr>
-        <!--bottom_content-->
-        <div id="bottom_content">
-            {% for p in object_list %}
-            {% if p.head_image %}
-                <img src="{{ p.head_image.url }}" alt="img">
-            {% endif %}
-            <h3>{{ p.title }}</h3>
-            {% endfor %}
-        </div>
-        <!--//bottom_content-->
         <!--aside-->
         <div id="aside">
-            <ul class="kor">
-                <li><a href="#">
 
-                </a></li>
-            </ul>
         </div>
         <!--//aside-->
     </div>
