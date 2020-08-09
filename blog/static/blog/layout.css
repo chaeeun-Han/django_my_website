@@ -1,0 +1,89 @@
+html,body{width:100%;height:100%}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sans-serif;font-size:12px}
+img,fieldset{border:0}
+img{vertical-align:top}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+legend{display:block;position:absolute;left:0;top:-9999em;overflow:hidden}
+table{border-collapse:collapse}
+caption{position:absolute;left:0;top:-9999em;overflow:hidden;height:0;width:0;font-size:0;line-height:0}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+#wrap {
+    width: 1140px;
+    margin: 0 auto;
+    font-family: 'Trebuchet MS',helvetica,sans-serif;
+}
+#header {
+    padding: 20px;
+}
+#container {
+    padding-bottom: 40px;
+    *zoom: 1;
+}
+#container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+#container .snb {
+    float: left;
+    width: 20%;
+    padding-top: 60px
+}
+#container .snb .inn {
+    padding-top: 200px;
+}
+#container .aside {
+    float: right;
+    width: 20%;
+}
+#container .aside .inn {
+    padding: 20px;
+}
+#container #content {
+    float: left;
+    width: 60%;
+}
+#container #content .inn {
+    padding: 20px;
+    border: solid #A6ACAF;
+    background-color: #F2F3F4 ;
+}
+
+
+.section {
+    position: relative;
+    border: 1px solid #ccc;
+    font-family: 'Nanum Gothic',sans-serif;
+}
+.section .hx {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-color: #eee;
+
+}
+.section .tx {
+    padding: 6px 10px;
+    border-top: 1px solid #ccc;
+    line-height: 1.5;
+}
+.section .section_more {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+.section .section_more .ico {
+    position: absolute;
+    left: -6px;
+    top: 2px;
+    width: 0;
+    height: 0;
+    border: 4px solid #aaa;
+    border-width: 4px 0 4px 4px;
+    border-color: transparent transparent transparent #aaa;
+}

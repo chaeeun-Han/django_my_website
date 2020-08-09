@@ -13,46 +13,88 @@
     <link rel="stylesheet" href="/static/blog/jquery.slim.min.js">
     <link rel="stylesheet" href="/static/blog/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="/static/blog/fontawesome.min.css">
+    <link rel="stylesheet" href="/static/blog/layout.css">
     <link rel="css/subcide.css" href="stylesheet">
 </head>
-<body>
+<!-- UI Object -->
 <div id="wrap">
-    <div class="container">
-        <!--header-->
-        <header id="header">
-            <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="http://placehold.it/1112x120" alt="To home"></a></h1>
-        </header>
-        <!-- //header-->
-        <!-- container-->
-        <div id="container">
+    <!-- header -->
+    <div id="header">
+        <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="http://placehold.it/1100x120" alt="To home"></a></h1>
+    </div>
+    <!-- //header -->
+    <!-- container -->
+    <div id="container">
+        <!-- snb -->
+        <div class="snb">
 
-            <div class="row">
-                <div class="col-2">
-                    <!-- Search Widget -->
-                    <h5 class="header">검색</h5>
-                    <div class="body">
-                        <div class="input-group">
-                            <input type="text" class="form-control">
-                            <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">검색</button>
-                                </span>
-                        </div>
-                    </div>
-                    <!-- //Search Widget -->
-                    <!--요리방송-->
-                    
-                    <h5 class="header">| 요리 방송</h5>
-                    <ul class="tv">
-                        <li><a href="https://home.ebs.co.kr/cook/main">최고의 요리 비결</a></li>
-                        <li><a href="http://www.imbc.com/broad/tv/ent/100father/">백파더 : 요리를 멈추지 마!</a></li>
-                        <li><a href="https://programs.sbs.co.kr/enter/2019taste/main?div=entersectionmain_allprogram">맛남의 광장</a></li>
-                    </ul>
+            <!-- Search Widget -->
+            <h5 class="header">검색</h5>
+            <div class="body">
+                <div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-append">
+            <button class="btn btn-secondary" type="button">검색</button>
+                            </span>
                 </div>
+            </div>
+            <!-- //Search Widget -->
+            <!--요리방송-->
+        <div class="inn">
+            <h5 class="header">| 요리 방송</h5>
+            <ul class="tv">
+                <li><a href="https://home.ebs.co.kr/cook/main">최고의 요리 비결</a></li>
+                <li><a href="http://www.imbc.com/broad/tv/ent/100father/">백파더 : 요리를 멈추지 마!</a></li>
+                <li><a href="https://programs.sbs.co.kr/enter/2019taste/main?div=entersectionmain_allprogram">맛남의 광장</a></li>
+            </ul>
 
-                <div class="col-8">
-                    <!-- Page Heading -->
-                    <h4 class="my-4">인기 게시물</h4>
-
+        </div>
+        </div>
+        <!-- //snb -->
+        <!-- aside -->
+        <div class="aside">
+        <div class="inn">
+            <div class="section">
+                <h5 class="hx">한식</h5>
+                <div class="tx">게시글</div>
+                <a href="#" class="section_more">
+                    <span class="ico"></span> 더보기
+                </a>
+            </div>
+        </div>
+        <div class="inn">
+            <div class="section">
+                <h5 class="hx">중식</h5>
+                <div class="tx">게시글</div>
+                <a href="#" class="section_more">
+                    <span class="ico"></span> 더보기
+                </a>
+            </div>
+        </div>
+        <div class="inn">
+            <div class="section">
+                <h5 class="hx">일식</h5>
+                <div class="tx">게시글</div>
+                <a href="#" class="section_more">
+                    <span class="ico"></span> 더보기
+                </a>
+            </div>
+        </div>
+        <div class="inn">
+            <div class="section">
+                <h5 class="hx">양식</h5>
+                <div class="tx">게시글</div>
+                <a href="#" class="section_more">
+                    <span class="ico"></span> 더보기
+                </a>
+            </div>
+        </div>
+        </div>
+        <!-- //aside -->
+        <!-- content -->
+        <div id="content">
+        <div class="inn">
+             <h4 class="my-4">인기 게시물</h4>
                     <!-- Project One -->
                     <div class="row">
                         <div class="col-md-7">
@@ -117,7 +159,7 @@
                             <a class="btn btn-primary" href="#">View Project</a>
                         </div>
                     </div>
-
+        </div>
                     <!-- Page Content -->
                     <div class="row">
                         {% for p in object_list %}
@@ -163,53 +205,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /.Page Content -->
-                <div class="col-2">
-                    <!-- Side Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">한식</h5>
-<!--                        <a href="#" class="card-header-icon" aria-label="more options">-->
-<!--                            <span class="icon">-->
-<!--                                <i class="fas-fa-angle-down" aria-hidden="true"></i>-->
-<!--                            </span>더보기-->
-<!--                        </a>-->
-                        <div class="card-body">
-                        </div>
 
-                    </div>
-
-                    <!-- Side Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">중식</h5>
-                        <div class="card-body">
-                        </div>
-<!--                        <p class="section_more"><a href="#"><span class="ico"></span>더보기</a></p>-->
-                    </div>
-
-                    <!-- Side Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">일식</h5>
-                        <div class="card-body">
-                        </div>
-                    </div>
-
-                    <!-- Side Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">양식</h5>
-                        <div class="card-body">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-
-        <hr>
-
-
+        <!-- //content -->
     </div>
-</div>
+    <!-- //container -->
 
-</body>
+</div>
+<!-- //UI Object -->
 </html>
