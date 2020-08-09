@@ -16,22 +16,17 @@
     <link rel="css/subcide.css" href="stylesheet">
 </head>
 <body>
-<dl class="skip-nav">
-    <dt><strong>바로 가기</strong></dt>
-    <dd><a href="#top_content">skip to content</a></dd>
-</dl>
-<hr>
 <div id="wrap">
-    <!--header-->
-    <header id="header">
-        <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="/static/img/logo_cuisine.jpg" alt="cuisine"></a></h1>
-    </header>
-    <!-- //header-->
     <div class="container">
+        <!--header-->
+        <header id="header">
+            <h1 class="logo"><a href="http://127.0.0.1:8000/"><img src="http://placehold.it/1112x120" alt="To home"></a></h1>
+        </header>
+        <!-- //header-->
         <!-- container-->
         <div id="container">
-            <div class="row">
 
+            <div class="row">
                 <div class="col-2">
                     <!-- Search Widget -->
                     <h5 class="header">검색</h5>
@@ -44,11 +39,17 @@
                         </div>
                     </div>
                     <!-- //Search Widget -->
+                    <!--요리방송-->
+                    
+                    <h5 class="header">| 요리 방송</h5>
+                    <ul class="tv">
+                        <li><a href="#"></a></li>
+                    </ul>
                 </div>
 
                 <div class="col-8">
                     <!-- Page Heading -->
-                    <h1 class="my-4">인기 게시물</h1>
+                    <h4 class="my-4">인기 게시물</h4>
 
                     <!-- Project One -->
                     <div class="row">
@@ -159,65 +160,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Project Five</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Project Six</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!-- /.Page Content -->
                 <div class="col-2">
-                <!-- Categories Widget -->
-                    <div class="card my-4">
-                        <h5 class="card-header">Categories</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#">Web Design</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">HTML</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Freebies</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#">JavaScript</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">CSS</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Tutorials</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Side Widget -->
                     <div class="card my-4">
                         <h5 class="card-header">한식</h5>
@@ -227,7 +173,6 @@
 <!--                            </span>더보기-->
 <!--                        </a>-->
                         <div class="card-body">
-                            {{ Posts.title }}
                         </div>
 
                     </div>
@@ -236,7 +181,6 @@
                     <div class="card my-4">
                         <h5 class="card-header">중식</h5>
                         <div class="card-body">
-                            {{ Posts.title }}
                         </div>
 <!--                        <p class="section_more"><a href="#"><span class="ico"></span>더보기</a></p>-->
                     </div>
@@ -245,7 +189,6 @@
                     <div class="card my-4">
                         <h5 class="card-header">일식</h5>
                         <div class="card-body">
-                            {{ Posts.title }}
                         </div>
                     </div>
 
@@ -253,7 +196,6 @@
                     <div class="card my-4">
                         <h5 class="card-header">양식</h5>
                         <div class="card-body">
-                            {{ Posts.title }}
                         </div>
                     </div>
 
@@ -266,32 +208,6 @@
 
     </div>
 </div>
-
-<!-- Pagination -->
-<ul class="pagination justify-content-center">
-    <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-        </a>
-    </li>
-    <li class="page-item">
-        <a class="page-link" href="#">1</a>
-    </li>
-    <li class="page-item">
-        <a class="page-link" href="#">2</a>
-    </li>
-    <li class="page-item">
-        <a class="page-link" href="#">3</a>
-    </li>
-    <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-        </a>
-    </li>
-</ul>
-<!-- //Pagination -->
 
 </body>
 </html>
