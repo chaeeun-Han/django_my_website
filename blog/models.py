@@ -5,9 +5,13 @@ from django.contrib.auth.models import User
 #글의 분류
 class Category(models.Model):
     name = models.CharField(max_length=25, help_text="블로그 글의 분류를 입력하세요.(ex:한식)")
+    slug = models.SlugField(unique=True, allow_unicode=True)
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return '/category/{}/'.format(self.slug)
 
 class Post(models.Model):
     # 블로그에서 제목을 의미, max_length로 글자 수 제한을 둠.
@@ -23,7 +27,7 @@ class Post(models.Model):
     # 누가 작성을 했는지, user라는 객체는 이미 django에서 제공. ForeignKey로 연결함.
     author = models.ForeignKey(User, on_delete=True)
 
-    category = models.ManyToManyField(Category, help_text="글의 분류를 설정하세요.")
+    category = models.ForeignKey(Category, help_text="글의 분류를 설정하세요.", on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title

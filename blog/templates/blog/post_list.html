@@ -51,12 +51,17 @@
         </div>
         <!-- //snb -->
         <!-- aside -->
-       
+
         <div class="aside">
         <div class="inn">
             <div class="section">
                 <h5 class="hx">한식</h5>
-                <div class="tx">게시글</div>
+                {% for p in object_list %}
+                    {% if p.category.name == "한식" %}
+                        <div class="tx"><a href="#">{{ p.title }}</a></div>
+                    {% endif %}
+                {% endfor %}
+
                 <a href="#" class="section_more">
                     <span class="ico"></span> 더보기
                 </a>
@@ -65,7 +70,11 @@
         <div class="inn">
             <div class="section">
                 <h5 class="hx">중식</h5>
-                <div class="tx">게시글</div>
+                {% for p in object_list %}
+                    {% if p.category.name == "중식" %}
+                        <div class="tx"><a href="#">{{ p.title }}</a></div>
+                    {% endif %}
+                {% endfor %}
                 <a href="#" class="section_more">
                     <span class="ico"></span> 더보기
                 </a>
@@ -74,7 +83,11 @@
         <div class="inn">
             <div class="section">
                 <h5 class="hx">일식</h5>
-                <div class="tx">게시글</div>
+                {% for p in object_list %}
+                    {% if p.category.name == "일식" %}
+                        <div class="tx"><a href="#">{{ p.title }}</a></div>
+                    {% endif %}
+                {% endfor %}
                 <a href="#" class="section_more">
                     <span class="ico"></span> 더보기
                 </a>
@@ -83,10 +96,14 @@
         <div class="inn">
             <div class="section">
                 <h5 class="hx">양식</h5>
-                <div class="tx">게시글</div>
-                <a href="#" class="section_more">
-                    <span class="ico"></span> 더보기
-                </a>
+                {% for p in object_list %}
+                    {% if p.category.name == "양식" %}
+                        <div class="tx"><a href="#">{{ p.title }}</a></div>
+                        <a href="#" class="section_more">
+                            <span class="ico"></span> 더보기
+                        </a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
         </div>
@@ -157,19 +174,25 @@
                     </div>
         </div>
                     <!-- Page Content -->
+
                     <div class="row">
-                        {% for p in object_list %}
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="{{ p.head_image.url }}" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">{{ p.title }}</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
+
+
+                            {% for p in object_list %}
+
+                                    <div class="col-lg-4 col-sm-6 mb-4">
+                                        <div class="card h-100">
+                                            <a href="#"><img class="card-img-top" src="{{ p.head_image.url }}" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">
+                                                    <a href="#">{{ p.title }}</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            {% endfor %}
+
                         <div class="col-lg-4 col-sm-6 mb-4">
                             <div class="card h-100">
                                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -180,33 +203,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Project Three</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 mb-4">
-                            <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                                <div class="card-body">
-                                    <h4 class="card-title">
-                                        <a href="#">Project Four</a>
-                                    </h4>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
 
         </div>
         <!-- //content -->
     </div>
     <!-- //container -->
-
 </div>
 <!-- //UI Object -->
 </html>
