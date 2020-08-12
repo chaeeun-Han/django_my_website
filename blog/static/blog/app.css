@@ -1,3 +1,5 @@
 .team {padding: 80px 0;}
 .team .tle {font-size: 26px; line-height: 80px;}
 .human figure img{width: 200px; border-radius: 50%}
+.human figcaption stron{display: block}
+.human figcaption small{display: block}
