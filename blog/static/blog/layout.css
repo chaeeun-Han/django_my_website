@@ -17,10 +17,12 @@ a:hover,a:active,a:focus{text-decoration:underline}
 }
 #header {
     padding: 20px;
+    background-color: red;
 }
 #container {
     padding-bottom: 40px;
     *zoom: 1;
+    background-color: lime;
 }
 #container:after {
     content: '';
@@ -30,7 +32,8 @@ a:hover,a:active,a:focus{text-decoration:underline}
 #container .snb {
     float: left;
     width: 20%;
-    padding-top: 60px
+    padding-top: 60px;
+    background-color: green;
 }
 #container .snb .inn {
     padding-top: 200px;
@@ -38,6 +41,7 @@ a:hover,a:active,a:focus{text-decoration:underline}
 #container .aside {
     float: right;
     width: 20%;
+    background-color: green;
 }
 #container .aside .inn {
     padding: 20px;
@@ -45,6 +49,7 @@ a:hover,a:active,a:focus{text-decoration:underline}
 #container #content {
     float: left;
     width: 60%;
+    background-color: purple;
 }
 #container #content .inn {
     padding: 20px;
