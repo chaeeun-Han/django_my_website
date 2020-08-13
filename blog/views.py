@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Post, Category
 from django.views.generic import ListView, DetailView
 
@@ -36,6 +36,22 @@ class PostListByCategory(ListView):
         category = Category.objects.get(slug=slug)
 
         return context
+
+
+# def category_detail(request, slug):
+#
+#     category = get_object_or_404(Category, slug=slug)
+#     post = Post.objects.filter(category=category)
+#
+#     return render(
+#         request,
+#         'blog/category_detail.html',
+#         {
+#             'category': category,
+#             'post': post,
+#         }
+#     )
+
 
 # def document_list(request):
 #     # documents = Document.objects.all()

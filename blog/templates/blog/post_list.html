@@ -110,11 +110,11 @@
                         <div class="tx"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></div>
                     {% endif %}
                 {% endfor %}
-                {% for category in category_list %}
-                <a href="{{ category.get_absolute_url }}" class="section_more">
+
+                <a href="#" class="section_more">
                     <span class="ico"></span> 더보기
                 </a>
-                {% endfor %}
+
             </div>
         </div>
         <div class="inn">
@@ -125,7 +125,7 @@
                         <div class="tx"><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></div>
                     {% endif %}
                 {% endfor %}
-                <a href="{{ category.get_absolute_url }}" class="section_more">
+                <a href="{{ Category.get_absolute_url }}" class="section_more">
                     <span class="ico"></span> 더보기
                 </a>
             </div>
