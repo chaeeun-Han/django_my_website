@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post, Category
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
+
 
 
 class PostList(ListView):
@@ -15,6 +16,19 @@ class PostList(ListView):
 
         return context
 
+
+class PostDetail(DetailView):
+    model = Post
+
+
+class PostListByCategory(ListView):
+
+    def get_queryset(self):
+        slug = self.kwargs['slug']
+        category = Category.objects.get(slug=slug)
+
+        return Post.objects.filter(category=category).order_by('-created')
+
 # def document_list(request):
 #     # documents = Document.objects.all()
 #
@@ -27,16 +41,16 @@ class PostList(ListView):
 #     total_count = len(documents)
 #     total_page = math.ceil(total_count/paginated_by)
 
-
-
-
-class PostListByCategory(ListView):
-
-    def get_queryset(self):
-        slug = self.kwargs['slug']
-        category = Category.objects.get(slug=slug)
-
-        return Post.objects.filter(category=category).order_by('-created')
+# def post_detail(request, pk):
+#     blog_post = Post.objects.get(pk=pk)
+#
+#     return render(
+#         request,
+#         'blog/post_detail.html',
+#         {
+#             'blog_post': blog_post,
+#          }
+#     )
 
 # def index(request):
 #     posts = Post.objects.all()
