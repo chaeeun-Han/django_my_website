@@ -1,5 +1,4 @@
 from django.db import models
-from django.urls import reverse
 from django.contrib.auth.models import User
 
 #글의 분류
@@ -11,7 +10,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/category/{}/'.format(self.slug)
+        return '/blog/category/{}/'.format(self.slug)
 
 class Post(models.Model):
     # 블로그에서 제목을 의미, max_length로 글자 수 제한을 둠.
